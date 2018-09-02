@@ -1,28 +1,30 @@
 #Runner
+require './lib/board'
 def introduction
 puts "Welcome to BATTLESHIP"
 
 puts "Would you like to (p)lay, read the (i)nstructions, or (q)uit?"
 end
 
-def game_loop
+def responses
   play_response = gets.chomp
-  until play_response == "q"
-    if play_response == "i"
-      puts "instructions"
-    elsif play_response == "p"
-      break
-    end
+  if play_response == "p"
+    p "play--tbc"
+  elsif play_response == "i"
+      puts "instructions--tbc"
+  elsif play_response == "q"
+    puts "You quit!"
   end
 end
+
 
 def start_game
 puts "starts game"
 end
 
-play_response = gets.chomp
-until play_response == "q"
+
 introduction
-game_loop
+responses
 start_game
-end
+board = Board.new
+p board.board_display

@@ -17,26 +17,17 @@ class SpaceTest < Minitest::Test
         space = Space.new
         board = Board.new
 
-        assert_equal [], board.board
+        assert_equal [". . . ."], board.board
     end
 
     def test_board_has_4_x_4_spaces
         space = Space.new
         board = Board.new
 
-        assert_equal [], board.board
+        assert_equal [". . . ."], board.board
         board.build_board
 
         assert_equal 4, board.build_board
 
     end
-
-    def test_board_can_be_displayed
-      space = Space.new
-      board = Board.new
-
-      assert_equal "", board.board_display
-    end
-
-
 end
