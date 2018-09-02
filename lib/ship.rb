@@ -1,5 +1,4 @@
 require 'pry'
-require './lib/space.rb'
 class Ship
     attr_reader :placement, :length
   def initialize(placement, length)
