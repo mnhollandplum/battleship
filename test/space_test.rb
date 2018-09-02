@@ -11,9 +11,9 @@ class SpaceTest < Minitest::Test
       assert_instance_of Space, space
     end
 
-    def test_space_starts_out_as_empty_not_hit
+    def test_space_starts_out_as_empty
       space = Space.new
-      refute space.hit
+      
       assert true, space.empty
     end
 
