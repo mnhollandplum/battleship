@@ -17,6 +17,4 @@ class SpaceTest < Minitest::Test
       assert true, space.empty
     end
 
-    def test_empty_space_can_no_longer_be_empty
-    end
 end
