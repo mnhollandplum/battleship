@@ -28,6 +28,5 @@ class SpaceTest < Minitest::Test
         board.build_board
 
         assert_equal 4, board.build_board
-
     end
 end

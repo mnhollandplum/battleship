@@ -6,10 +6,6 @@ class Space
   end
 
   def check_for_hit
-    if @hit == true
-      "H"
-    else
-      "M"
-    end
+     @hit
   end
 end
