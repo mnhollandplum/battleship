@@ -23,7 +23,6 @@ class SpaceTest < Minitest::Test
   def test_board_has_4_x_4_spaces
     board = Board.new
 
-    assert_equal [], board.board
     board.build_board
 
     assert_equal 4, board.build_board
