@@ -16,5 +16,5 @@ They either hit a ship or miss a ship and given feedback
 Each shot location is recorded on the board
     if the player tries to guess the same spot twice, they are prompted to make another guess
     After each turn the boards are shown with M or H added.
-Once an entire ship is hit, it sinks and the player gets feedback that they sunk a ship
+Once an entire ship is hit, it sinks and the player gets feedback that they sunk a ship. This can be determined by length -=1 each time it's hit and when length == 0, ship is sunk
 Once both ships are sunk for a player, the game is over, feedback is given and the game loop ends.

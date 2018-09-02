@@ -1,6 +1,6 @@
 require './lib/space.rb'
 
-  @board = [". . . ."]
+  @board = []
 
   def build_board
   4.times {@board << [Space.new, Space.new, Space.new, Space.new]}
