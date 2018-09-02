@@ -4,13 +4,4 @@ class Computer
   def initialize
     @ships = 2
   end
-
-  def place_ship(placement, length)
-  end
-
-  def horizontal_placement
-  end
-
-  def vertical_placement
-  end
 end
