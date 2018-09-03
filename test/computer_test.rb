@@ -25,8 +25,8 @@ class ComputerTest < Minitest::Test
 
     board.build_board
 
-    assert_equal '', computer.place_random_ship
-
+    assert_equal '', computer.place_random_ships(2, board)
+      binding.pry
   end
 
   def test_computer_can_place_ship_horizontally

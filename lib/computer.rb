@@ -6,6 +6,12 @@ class Computer
     @ships = 2
   end
 
-  def place_random_ship
+  def place_random_ships(length, board)
+  end
+
+  def place_ship_horizontally(length, board)
+  end
+
+  def place_ship_vertically(length, board)
   end
 end
