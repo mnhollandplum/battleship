@@ -13,7 +13,7 @@ class SpaceTest < Minitest::Test
 
     def test_space_starts_out_as_empty
       space = Space.new
-      
+
       assert true, space.empty
     end
 
