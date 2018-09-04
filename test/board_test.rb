@@ -36,4 +36,23 @@ class SpaceTest < Minitest::Test
     assert_instance_of Space, board.board[0][0]
   end
 
+  def test_can_assign_spaces_to_a_key
+    board = Board.new
+
+    board.build_board
+    a1 = board.board[0][0]
+    b2 = board.board[1][1]
+    c3 = board.board[2][2]
+    d4 = board.board[3][3]
+
+    assert_equal a1, board.assign_spaces["A1"]
+
+    assert_equal b2,
+    board.assign_spaces["B2"]
+    assert_equal c3,
+    board.assign_spaces["C3"]
+    assert_equal d4,
+    board.assign_spaces["D4"]
+  end
+
 end

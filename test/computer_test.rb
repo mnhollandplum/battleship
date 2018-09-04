@@ -19,24 +19,18 @@ class ComputerTest < Minitest::Test
     assert_equal 2, computer.ships
   end
 
-  def test_computer_can_randomly_place_two_ships
-    computer = Computer.new
-    board = Board.new
-    # ship = Ship.new([0], 2)
-
-    board.build_board
-
-    assert_instance_of Ship, computer.place_random_ships(2, board)
-  end
-
-  def test_computer_can_place_ship_horizontally
-    computer = Computer.new
-    board = Board.new
-    ship = Ship.new([0,0], 2)
-
-    board.build_board
-  end
-
-  def test_computer_can_place_ship_vertically
-  end
-end
+#   def test_computer_can_randomly_place_two_ships
+#     computer = Computer.new
+#     board = Board.new
+#
+#     board.build_board
+#
+#     assert_instance_of Ship, computer.place_random_ships(2, board)
+#   end
+#
+#   def test_computer_can_place_ship_horizontally
+#   end
+#
+#   def test_computer_can_place_ship_vertically
+#   end
+# end
