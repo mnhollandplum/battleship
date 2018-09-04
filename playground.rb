@@ -12,7 +12,7 @@ puts ". 1 2 3 4"
 puts "A#{@board}\nB#{@board}\nC#{@board}\nD#{@board}".tr('"', '')
 
 
-# "A1" = @board[0][0]
+p A1 = @board[0][0]
 # "A2" = @board[0][1]
 # "A3" = @board[0][2]
 # "A4" = @board[0][3]

@@ -7,6 +7,7 @@ class Board
 
   def build_board
     4.times {@board << [Space.new, Space.new, Space.new, Space.new]}
+    binding.pry
   end
 
   def board_display

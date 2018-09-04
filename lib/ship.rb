@@ -4,6 +4,7 @@ class Ship
   def initialize(placement, length)
     @placement = placement
     @length = length
+    binding.pry
   end
 
   def ship_hit

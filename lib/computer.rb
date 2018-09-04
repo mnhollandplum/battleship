@@ -7,6 +7,7 @@ class Computer
   end
 
   def place_random_ships(length, board)
+    Ship.new([0,0], 2)
   end
 
   def place_ship_horizontally(length, board)
