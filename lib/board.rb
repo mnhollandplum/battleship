@@ -25,4 +25,5 @@ class Board
     "D4"=>@board[3][3],
   }
   end
+
 end

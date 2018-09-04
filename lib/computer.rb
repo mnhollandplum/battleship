@@ -8,7 +8,7 @@ class Computer
   end
 
   def place_random_ships(length, board)
-    placement = @board.sample(2)
+
   end
 
   def place_ship_horizontally(length, board)
@@ -16,5 +16,7 @@ class Computer
   end
 
   def place_ship_vertically(length, board)
+
   end
+
 end
