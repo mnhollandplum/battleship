@@ -1,3 +1,4 @@
+require 'pry'
 require 'simplecov'
 SimpleCov.start
 require './lib/space'
@@ -15,6 +16,24 @@ class SpaceTest < Minitest::Test
       space = Space.new
 
       assert true, space.empty
+    end
+
+    def test_space_can_be_filled_by_ship
+      space = Space.new
+
+      space.filled_by_ship
+
+      refute space.empty
+      assert true, space.filled_by_ship
+    end
+
+    def test_space_can_be_shot_by_enemy
+      space = Space.new
+
+      space.shot_by_enemy
+
+      refute space.empty
+      assert true, space.shot_by_enemy
     end
 
 end
