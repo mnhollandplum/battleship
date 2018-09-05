@@ -4,7 +4,6 @@ class Computer
     attr_reader :ships
   def initialize
     @ships = 2
-    @board = Board.new.board
   end
 
   def place_ship_horizontally(length, board)
