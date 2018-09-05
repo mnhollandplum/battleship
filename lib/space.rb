@@ -1,13 +1,15 @@
 require 'pry'
 class Space
-    attr_reader :empty
-  def initialize
-    @empty = true
+    attr_accessor :empty
+  def initialize(empty=true)
+    @empty = empty
     @state = nil
   end
 
   def filled_by_ship
-    @empty = false
+    if true
+      @empty = false
+    end
   end
 
   def shot_by_enemy

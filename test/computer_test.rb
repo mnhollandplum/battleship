@@ -3,7 +3,6 @@ require 'simplecov'
 SimpleCov.start
 require './lib/computer'
 require './lib/board'
-require './lib/ship'
 require './lib/space'
 require 'minitest/autorun'
 require 'minitest/pride'
@@ -44,6 +43,18 @@ class ComputerTest < Minitest::Test
 
   end
 
-#   def test_space_on_board_is_no_longer_empty_after_placing_ship
-#
+  # def test_space_on_board_is_no_longer_empty_after_placing_ship
+  #   computer_board = Board.new
+  #   computer = Computer.new(computer_board)
+  #
+  #   computer_board.build_board
+  #
+  #
+  #   computer.place_ship_horizontally(3, computer_board.horizontal_board)
+  #
+  #   computer.place_ship_vertically(2, computer_board.vertical_board)
+  #
+  #   assert_instance_of Space, computer.place_ships(computer_board)
+  # end
+
 end

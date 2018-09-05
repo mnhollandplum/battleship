@@ -32,4 +32,17 @@ class Computer
     end
     @ship_2 << location.join.scan(/../)
   end
+
+  def place_ships(board)
+    board.board_coordinates[@ship_1.flatten[0]].empty = false
+
+    board.board_coordinates[@ship_1.flatten[1]].empty = false
+
+    board.board_coordinates[@ship_1.flatten[2]].empty = false
+
+    board.board_coordinates[@ship_2.flatten[0]].empty = false
+
+    board.board_coordinates[@ship_2.flatten[1]].empty = false
+  end
+
 end
