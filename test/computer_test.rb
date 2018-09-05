@@ -37,5 +37,15 @@ class ComputerTest < Minitest::Test
     board.vertical_board
 
     assert_equal 3, computer.place_ship_vertically(3, board.vertical_board).count
+    binding.pry
   end
+
+  # def test_can_place_two_random_ships
+  #   computer = Computer.new
+  #   board = Board.new
+  #
+  #   board.build_board
+  #
+  #   assert_equal '', computer.place_random_ships(3, board.board_coordinates)
+  # end
 end

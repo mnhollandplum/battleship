@@ -14,7 +14,7 @@ class Ship
   end
 
   def location_on_board(length, board)
-    board.flatten.sample(length)
+
   end
 
 end
