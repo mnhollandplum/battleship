@@ -7,11 +7,6 @@ class Computer
     @board = Board.new.board
   end
 
-#   def place_random_ships(length, board)
-#
-#
-#   end
-#
   def place_ship_horizontally(length, board)
     location = []
     row = board.keys.sample
@@ -21,6 +16,7 @@ class Computer
       random_column = columns.pop.to_s
       location << random_column
     end
-    location
+    location.join.scan(/../)
   end
+
 end

@@ -19,14 +19,13 @@ class ComputerTest < Minitest::Test
     assert_equal 2, computer.ships
   end
 
-  def test_computer_can_place_ship_horizontally
+  def test_computer_can_place_ship_horizontally_without_repeating_columns
     computer = Computer.new
     board = Board.new
 
     board.build_board
     board.horizontal_board
 
-    assert_equal computer.place_ship_horizontally, computer.place_ship_horizontally(3, board.horizontal_board)
-      binding.pry
+    assert_equal 3, computer.place_ship_horizontally(3, board.horizontal_board).count
   end
 end

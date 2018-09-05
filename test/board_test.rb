@@ -91,12 +91,7 @@ class SpaceTest < Minitest::Test
     board = Board.new
 
     board.build_board
-    a1 = board.board[0][0]
 
     assert_equal board.vertical_board["1"]["A"], board.horizontal_board["A"]["1"]
-
-
   end
-
-
 end
