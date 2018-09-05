@@ -1,13 +1,15 @@
 require 'pry'
 class Space
-    attr_reader :empty
-  def initialize
-    @empty = true
+    attr_accessor :empty
+  def initialize(empty=true)
+    @empty = empty
     @state = nil
   end
 
   def filled_by_ship
-    @empty = false
+    if true
+      @empty = false
+    end
   end
 
   def shot_by_enemy
@@ -21,3 +23,7 @@ class Space
     end
   end
 end
+
+
+#run the filled_by_ship_method on the keys that are returned by the computer class for the computer board to change the state of those spaces to filled_by_ship/!empty
+  ##do the same for the player class

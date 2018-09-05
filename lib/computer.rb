@@ -1,10 +1,12 @@
 require 'pry'
 require './lib/board'
 class Computer
-    attr_reader :ships
-  def initialize
+    attr_reader :ships, :board, :ship_1, :ship_2
+  def initialize(board)
     @ships = 2
-    @board = Board.new.board
+    @board = board
+    @ship_1 = []
+    @ship_2 = []
   end
 
   def place_ship_horizontally(length, board)
@@ -16,7 +18,7 @@ class Computer
       random_column = columns.pop.to_s
       location << random_column
     end
-    location.join.scan(/../)
+  @ship_1 << location.join.scan(/../)
   end
 
   def place_ship_vertically(length, board)
@@ -28,7 +30,19 @@ class Computer
         location << random_row
         location << column
     end
-      location.join.scan(/../)
+    @ship_2 << location.join.scan(/../)
+  end
+
+  def place_ships(board)
+    board.board_coordinates[@ship_1.flatten[0]].empty = false
+
+    board.board_coordinates[@ship_1.flatten[1]].empty = false
+
+    board.board_coordinates[@ship_1.flatten[2]].empty = false
+
+    board.board_coordinates[@ship_2.flatten[0]].empty = false
+
+    board.board_coordinates[@ship_2.flatten[1]].empty = false
   end
 
 end

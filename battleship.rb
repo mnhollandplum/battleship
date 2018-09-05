@@ -1,5 +1,7 @@
 #Runner
 require './lib/board'
+require './lib/computer'
+require './lib/space'
 def introduction
 puts "Welcome to BATTLESHIP"
 
@@ -20,7 +22,11 @@ puts "Would you like to (p)lay, read the (i)nstructions, or (q)uit?"
 end
 
 def computer_place_ships
-  #computer places ships
+  computer_board = Board.new
+  computer = Computer.new(computer_board)
+  computer_board.build_board
+  computer.place_ship_horizontally(3, computer_board.horizontal_board)
+  computer.place_ship_vertically(2, computer_board.vertical_board)
   player_place_ships
 end
 

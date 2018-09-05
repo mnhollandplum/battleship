@@ -28,6 +28,14 @@ class SpaceTest < Minitest::Test
     assert_equal 4, board.build_board
   end
 
+  def test_board_has_coordinates
+    board = Board.new
+
+    board.build_board
+
+    assert_equal board.board[0][0], board.board_coordinates["A1"]
+  end
+
   def test_board_is_built_up_of_spaces
     board = Board.new
 
