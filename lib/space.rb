@@ -19,6 +19,5 @@ class Space
     else
       puts "please choose a position on the board"
     end
-
   end
 end
