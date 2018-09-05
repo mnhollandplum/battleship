@@ -1,22 +1,13 @@
 require 'pry'
 require './lib/board'
 class Computer
-    attr_reader :ships
-  def initialize
+    attr_reader :ships, :board
+  def initialize(board)
     @ships = 2
-    #instatiate and instance of board for the computer.
+    @board = board
+    @ship_1 = []
+    @ship_2 = []
   end
-
-  # def place_random_ships(length, board)
-  #   final_placement = []
-  #
-  #   final_placement << place_ship_horizontally(length, board)
-  #
-  #   final_placement << place_ship_vertically(length, board)
-  #   binding.pry
-  #
-  #   final_placements
-  # end
 
   def place_ship_horizontally(length, board)
     location = []
@@ -27,7 +18,7 @@ class Computer
       random_column = columns.pop.to_s
       location << random_column
     end
-    location.join.scan(/../)
+  @ship_1 << location.join.scan(/../)
   end
 
   def place_ship_vertically(length, board)
@@ -39,7 +30,7 @@ class Computer
         location << random_row
         location << column
     end
-      location.join.scan(/../)
+    @ship_2 << location.join.scan(/../)
   end
 
   #shoot at the players board

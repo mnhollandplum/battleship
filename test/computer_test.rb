@@ -10,42 +10,37 @@ require 'minitest/pride'
 
 class ComputerTest < Minitest::Test
   def test_computer_exists
-    computer = Computer.new
+    computer_board = Board.new
+    computer = Computer.new(computer_board)
     assert_instance_of Computer, computer
   end
 
   def test_computer_starts_with_two_ships
-    computer = Computer.new
+    computer_board = Board.new
+    computer = Computer.new(computer_board)
     assert_equal 2, computer.ships
   end
 
   def test_computer_can_place_ship_horizontally_without_repeating_columns
-    computer = Computer.new
-    board = Board.new
+    computer_board = Board.new
+    computer = Computer.new(computer_board)
 
-    board.build_board
-    board.horizontal_board
+    computer_board.build_board
+    computer_board.horizontal_board
 
-    assert_equal 3, computer.place_ship_horizontally(3, board.horizontal_board).count
+    assert_equal 3,
+   computer.place_ship_horizontally(3, computer_board.horizontal_board).flatten.count
+
   end
 
   def test_computer_can_place_ship_vertically_without_repeating_columns
-    computer = Computer.new
-    board = Board.new
+    computer_board = Board.new
+    computer = Computer.new(computer_board)
 
-    board.build_board
-    board.vertical_board
+    computer_board.build_board
+    computer_board.vertical_board
 
-    assert_equal 3, computer.place_ship_vertically(3, board.vertical_board).count
-    binding.pry
+    assert_equal 3, computer.place_ship_vertically(3, computer_board.vertical_board).flatten.count
+
   end
-
-  # def test_can_place_two_random_ships
-  #   computer = Computer.new
-  #   board = Board.new
-  #
-  #   board.build_board
-  #
-  #   assert_equal '', computer.place_random_ships(3, board.board_coordinates)
-  # end
 end
