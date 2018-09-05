@@ -28,4 +28,14 @@ class ComputerTest < Minitest::Test
 
     assert_equal 3, computer.place_ship_horizontally(3, board.horizontal_board).count
   end
+
+  def test_computer_can_place_ship_vertically_without_repeating_columns
+    computer = Computer.new
+    board = Board.new
+
+    board.build_board
+    board.vertical_board
+
+    assert_equal 3, computer.place_ship_vertically(3, board.vertical_board).count
+  end
 end
