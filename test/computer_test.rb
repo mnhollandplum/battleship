@@ -43,4 +43,7 @@ class ComputerTest < Minitest::Test
     assert_equal 3, computer.place_ship_vertically(3, computer_board.vertical_board).flatten.count
 
   end
+
+#   def test_space_on_board_is_no_longer_empty_after_placing_ship
+#
 end

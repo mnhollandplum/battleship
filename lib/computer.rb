@@ -1,7 +1,7 @@
 require 'pry'
 require './lib/board'
 class Computer
-    attr_reader :ships, :board
+    attr_reader :ships, :board, :ship_1, :ship_2
   def initialize(board)
     @ships = 2
     @board = board
@@ -32,7 +32,4 @@ class Computer
     end
     @ship_2 << location.join.scan(/../)
   end
-
-  #shoot at the players board
-
 end
