@@ -15,7 +15,6 @@ class Ship
 
   def location_on_board(length, board)
     board.flatten.sample(length)
-    binding.pry
   end
 
 end

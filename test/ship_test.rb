@@ -39,14 +39,17 @@ class ShipTest < Minitest::Test
     assert ship.ship_sunk
   end
 
-  def test_ship_can_be_put_on_board
+  def test_ship_can_be_put_on_board_horizontally
     ship = Ship.new(2)
     board = Board.new
 
     board.build_board
-    board.assign_spaces
+    board.horizontal_board
 
-    assert_equal '', ship.location_on_board(2, board.board)
+    a1 = board.horizontal_board["A"]["1"]
+    a2 = board.horizontal_board["A"]["2"]
+
+    assert_equal [a1, a2], ship.location_on_board(2, board.board)
     binding.pry
   end
 end
