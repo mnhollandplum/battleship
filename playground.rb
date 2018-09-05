@@ -28,3 +28,22 @@ p A1 = @board[0][0]
 # "D2" = @board[3][1]
 # "D3" = @board[3][2]
 # "D4" = @board[3][3]
+
+def rows
+  {
+    :row_a => assign_spaces.group_by do |key, value|
+      key.include?("A")
+    end
+
+    # :row_b => board[1],
+    # :row_c => board[2],
+    # :row_d => board[3]
+  }
+end
+
+def columns
+  column_1 = board[0..3][1]
+  column_2 = board[0..3][1]
+  column_3 = board[0..3][1]
+  column_4 = board[0..3][1]
+end

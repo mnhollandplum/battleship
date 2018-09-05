@@ -22,31 +22,10 @@ class ComputerTest < Minitest::Test
   # def test_computer_can_randomly_place_two_ships
   #   computer = Computer.new
   #   board = Board.new
-  #
+  # 
   #   board.build_board
+  #   board.assign_spaces
+  #
+  #   assert_equal "", computer.place_random_ships(2, board.assign_spaces)
   # end
-
-#   def test_computer_can_place_ship_horizontally
-#     skip
-#     computer = Computer.new
-#     board = Board.new
-#     ship = Ship.new(["A1", "A2"], 2)
-#
-#     board.build_board
-#     board.assign_spaces
-#
-#     assert_equal (["A1", "A2"]), computer.place_ship_horizontally(2, board)
-#   end
-#
-#   def test_computer_can_place_ship_vertically
-#     computer = Computer.new
-#     board = Board.new
-#     ship = Ship.new(["A1", "B1"], 2)
-#
-#     board.build_board
-#     board.assign_spaces
-#
-#     assert_equal (["A1", "B1"]), computer.place_ship_horizontally(2, board)
-#
-#   end
 end

@@ -27,13 +27,13 @@ class SpaceTest < Minitest::Test
       assert true, space.filled_by_ship
     end
 
-    def test_space_can_be_hit_by_enemy
+    def test_space_can_be_shot_by_enemy
       space = Space.new
 
-      space.hit_by_enemy
+      space.shot_by_enemy
 
       refute space.empty
-      assert true, space.hit_by_enemy
+      assert true, space.shot_by_enemy
     end
 
 end
