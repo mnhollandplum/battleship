@@ -4,6 +4,7 @@ SimpleCov.start
 require './lib/player'
 require './lib/board'
 require './lib/space'
+require './lib/computer'
 require 'minitest/autorun'
 require 'minitest/pride'
 
@@ -43,4 +44,31 @@ class PlayerTest < Minitest::Test
 
     assert_equal ["B1", "C1", "D1"], player.place_ship_vertically(3, board.vertical_board, "B1")
   end
+
+  def test_computer_can_fire_at_players_board
+    computer_board = Board.new
+    computer = Computer.new(computer_board)
+    computer_board.build_board
+
+    player_board = Board.new
+    player = Player.new(player_board)
+    player_board.build_board
+
+    assert computer_board.board_coordinates.include?(player.shoot_at_computer(computer_board, "A1"))
+  end
+
+  def test_player_can_fire_at_computer_board
+    computer_board = Board.new
+    computer = Computer.new(computer_board)
+    computer_board.build_board
+
+    player_board = Board.new
+    player = Player.new(player_board)
+    player_board.build_board
+
+    player.shoot_at_computer(computer_board, "A1")
+
+    assert computer_board.board_coordinates.keys.include?(player.shoot_at_computer(computer_board, "A1"))
+  end
+
 end
