@@ -34,37 +34,21 @@ def setup
 end
 
 def computer_place_ships
- @computer.place_ship_horizontally(3, @computer_board.horizontal_board)
-  @computer.place_ship_vertically(3, @computer_board.vertical_board)
-  #
-  @computer.place_ships(@computer_board)
 end
 
-# def player_place_ships
-#   board = Board.new
-#   board.build_board
-#
-#   player = Player.new(board)
-#    puts "Please enter your starting coordinate for your destroyer"
-#    ship_1 = gets.chomp
-#   player.place_ship_horizontally(2, board.horizontal_board, ship_1)
-#   puts "Please enter your starting coordinate for your submarine"
-#   ship_2 = gets.chomp
-#   player.place_ship_vertically(3, board.vertical_board, ship_2)
-#
-#   player.place_ships(board)
-# end
+def player_place_ships
+end
 
 
 
 def game_flow
-puts "starts game"
+#loop player shoots, computer shoots. Feedback for hit of miss. Feeback for sunk ship. Game over condition and feedback.
 end
 
 
 introduction
-binding.pry
+
 setup
 computer_place_ships
-# player_place_ships
+player_place_ships
 game_flow
