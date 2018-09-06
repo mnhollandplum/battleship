@@ -1,4 +1,3 @@
-require 'pry'
 require 'simplecov'
 SimpleCov.start
 require './lib/player'
@@ -13,6 +12,7 @@ class PlayerTest < Minitest::Test
   def test_player_exists
     board = Board.new
     player = Player.new(board)
+
     assert_instance_of Player, player
   end
 
@@ -25,6 +25,7 @@ class PlayerTest < Minitest::Test
 
   def test_player_can_place_ship_horizontally
     board = Board.new
+
     board.build_board
 
     player = Player.new(board)
@@ -36,6 +37,7 @@ class PlayerTest < Minitest::Test
 
   def test_player_can_place_ship_vertically
     board = Board.new
+
     board.build_board
 
     player = Player.new(board)
@@ -47,7 +49,7 @@ class PlayerTest < Minitest::Test
 
   def test_computer_can_fire_at_players_board
     computer_board = Board.new
-    computer = Computer.new(computer_board)
+
     computer_board.build_board
 
     player_board = Board.new
@@ -59,7 +61,7 @@ class PlayerTest < Minitest::Test
 
   def test_player_can_fire_at_computer_board
     computer_board = Board.new
-    computer = Computer.new(computer_board)
+
     computer_board.build_board
 
     player_board = Board.new
@@ -70,5 +72,4 @@ class PlayerTest < Minitest::Test
 
     assert computer_board.board_coordinates.keys.include?(player.shoot_at_computer(computer_board, "A1"))
   end
-
 end

@@ -1,4 +1,3 @@
-require 'pry'
 class Player
     attr_reader :ships
   def initialize(board)
@@ -37,15 +36,12 @@ class Player
   end
 
   def shoot_at_computer(board, coordinate)
-  options = board.board_coordinates.keys
+    options = board.board_coordinates.keys
 
-  options.delete(coordinate)
-
+    options.delete(coordinate)
   end
 
   def shot_fills_space(board, coordinate)
     board.board_coordinates[shoot_at_computer(board, coordinate)].shot_by_enemy = true
   end
-
-
 end

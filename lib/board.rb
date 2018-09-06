@@ -1,4 +1,3 @@
-require 'pry'
 class Board
     attr_reader :board
   def initialize
@@ -6,7 +5,12 @@ class Board
   end
 
   def build_board
-    4.times {@board << [Space.new, Space.new, Space.new, Space.new]}
+    4.times {
+              @board << [Space.new,
+                         Space.new,
+                         Space.new,
+                         Space.new]
+            }
   end
 
   def board_coordinates
@@ -54,7 +58,7 @@ class Board
       "2"=>@board[3][1],
       "3"=>@board[3][2],
       "4"=>@board[3][3]}
-  }
+    }
   end
 
   def vertical_board
@@ -77,5 +81,4 @@ class Board
       "D"=>@board[3][3]}
     }
   end
-
 end
