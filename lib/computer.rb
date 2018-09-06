@@ -1,10 +1,9 @@
 require 'pry'
 require './lib/board'
 class Computer
-    attr_reader :ships, :board, :ship_1, :ship_2
+    attr_reader :ships, :ship_1, :ship_2
   def initialize(board)
     @ships = 2
-    @board = board
     @ship_1 = []
     @ship_2 = []
   end
