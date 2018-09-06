@@ -53,7 +53,7 @@ class ComputerTest < Minitest::Test
     player = Player.new(player_board)
     player_board.build_board
 
-    assert player_board.board_coordinates.include?(computer.shoot_at_player(player_board))
+    assert player_board.board_coordinates.keys.include?(computer.shoot_at_player(player_board))
   end
 
 

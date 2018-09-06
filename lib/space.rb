@@ -1,9 +1,10 @@
 require 'pry'
 class Space
-    attr_accessor :empty
+    attr_accessor :empty, :shot_by_enemy
   def initialize(empty=true)
     @empty = empty
     @state = nil
+    @shot_by_enemy = false
   end
 
   def filled_by_ship
