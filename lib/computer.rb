@@ -44,4 +44,10 @@ class Computer
     board.board_coordinates[@ship_2.flatten[1]].empty = false
   end
 
+  def shoot_at_player(board)
+  options = board.board_coordinates.keys
+
+  options.delete(options.sample)
+  end
+
 end
