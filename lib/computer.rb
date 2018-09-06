@@ -1,4 +1,3 @@
-require 'pry'
 require './lib/board'
 class Computer
     attr_reader :ships, :ship_1, :ship_2
@@ -17,7 +16,7 @@ class Computer
       random_column = columns.pop.to_s
       location << random_column
     end
-  @ship_1 << location.join.scan(/../)
+    @ship_1 << location.join.scan(/../)
   end
 
   def place_ship_vertically(length, board)
@@ -49,5 +48,4 @@ class Computer
 
   options.delete(options.sample)
   end
-
 end

@@ -1,4 +1,3 @@
-require 'pry'
 require 'simplecov'
 SimpleCov.start
 require './lib/space'
@@ -35,5 +34,4 @@ class SpaceTest < Minitest::Test
       refute space.empty
       assert true, space.shot_by_enemy
     end
-
 end

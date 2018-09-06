@@ -1,4 +1,3 @@
-require 'pry'
 require 'simplecov'
 SimpleCov.start
 require './lib/computer'
@@ -12,12 +11,14 @@ class ComputerTest < Minitest::Test
   def test_computer_exists
     board = Board.new
     computer = Computer.new(board)
+
     assert_instance_of Computer, computer
   end
 
   def test_computer_starts_with_two_ships
     board = Board.new
     computer = Computer.new(board)
+
     assert_equal 2, computer.ships
   end
 
@@ -29,8 +30,7 @@ class ComputerTest < Minitest::Test
     board.horizontal_board
 
     assert_equal 3,
-   computer.place_ship_horizontally(3, board.horizontal_board).flatten.count
-
+    computer.place_ship_horizontally(3, board.horizontal_board).flatten.count
   end
 
   def test_computer_can_place_ship_vertically_without_repeating_columns
@@ -50,11 +50,8 @@ class ComputerTest < Minitest::Test
     computer_board.build_board
 
     player_board = Board.new
-    player = Player.new(player_board)
     player_board.build_board
 
     assert player_board.board_coordinates.keys.include?(computer.shoot_at_player(player_board))
   end
-
-
 end

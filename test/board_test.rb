@@ -1,4 +1,3 @@
-require 'pry'
 require 'simplecov'
 SimpleCov.start
 require './lib/board'
@@ -14,15 +13,12 @@ class SpaceTest < Minitest::Test
   end
 
   def test_board_starts_with_all_empty_spaces
-
     board = Board.new
-
     assert_equal [], board.board
   end
 
   def test_board_has_4_x_4_spaces
     board = Board.new
-
     board.build_board
 
     assert_equal 4, board.build_board
@@ -30,7 +26,6 @@ class SpaceTest < Minitest::Test
 
   def test_board_has_coordinates
     board = Board.new
-
     board.build_board
 
     assert_equal board.board[0][0], board.board_coordinates["A1"]
@@ -38,7 +33,6 @@ class SpaceTest < Minitest::Test
 
   def test_board_is_built_up_of_spaces
     board = Board.new
-
     board.build_board
 
     assert_instance_of Space, board.board[0][0]
@@ -46,8 +40,8 @@ class SpaceTest < Minitest::Test
 
   def test_can_create_horizontal_board_hash
     board = Board.new
-
     board.build_board
+
     a1 = board.board[0][0]
     b2 = board.board[1][1]
     c3 = board.board[2][2]
@@ -66,14 +60,12 @@ class SpaceTest < Minitest::Test
     a4 = board.board[0][3]
 
     assert_equal ({"1"=>a1,"2"=> a2, "3"=>a3, "4"=>a4}), board.horizontal_board["A"]
-
   end
 
   def test_can_create_vertical_board_hash
-
       board = Board.new
-
       board.build_board
+
       a1 = board.board[0][0]
       b2 = board.board[1][1]
       c3 = board.board[2][2]
@@ -92,12 +84,10 @@ class SpaceTest < Minitest::Test
       d1 = board.board[3][0]
 
       assert_equal ({"A"=>a1,"B"=> b1, "C"=>c1, "D"=>d1}), board.vertical_board["1"]
-
   end
 
   def test_horizontal_and_vertical_hashes_are_made_up_of_the_same_spaces
     board = Board.new
-
     board.build_board
 
     assert_equal board.vertical_board["1"]["A"], board.horizontal_board["A"]["1"]
